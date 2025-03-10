@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h2>Employee List</h2>
+<a href="{% url 'add_employee' %}">Add Employee</a>
+<table>
+    <thead>
+        <tr>
+            <th>S No</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.dob }}</td>
+            <td>{{ employee.department.name }}</td>
+            <td>
+                <a href="{% url 'view_employee' employee.emp_id %}">View</a>
+                <a href="{% url 'edit_employee' employee.emp_id %}">Edit</a>
+                <a href="{% url 'leave_history' employee.emp_id %}">Leave</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

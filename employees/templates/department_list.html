@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h2>Department List</h2>
+<a href="{% url 'add_department' %}">Add Department</a>
+<table>
+    <thead>
+        <tr>
+            <th>Sno</th>
+            <th>Department Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for department in departments %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ department.name }}</td>
+            <td>{{ department.description }}</td>
+                <td>
+                    <a href="{% url 'edit_department' department.id %}">Edit</a>
+                    <a href="{% url 'delete_department' department.id %}">Delete</a>
+                </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
+
+
+
+
+
+
+

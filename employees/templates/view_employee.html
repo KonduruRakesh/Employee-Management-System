@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h2>Employee Details</h2>
+<p><strong>Name:</strong> {{ employee.name }}</p>
+<p><strong>Email:</strong> {{ employee.email }}</p>
+<p><strong>Employee ID:</strong> {{ employee.emp_id }}</p>
+<p><strong>DOB:</strong> {{ employee.dob }}</p>
+<p><strong>Gender:</strong> {{ employee.get_gender_display }}</p>
+<p><strong>Designation:</strong> {{ employee.designation }}</p>
+<p><strong>Department:</strong> {{ employee.department.name }}</p>
+<p><strong>Salary:</strong> {{ employee.salary }}</p>
+<a href="{% url 'employee_list' %}">Back to List</a>
+{% endblock content %}

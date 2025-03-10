@@ -1,0 +1,67 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h2>Add Employee</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <!-- Employee ID -->
+    <div class="form-group">
+        <label for="emp_id">Employee ID:</label>
+        <input type="text" id="emp_id" name="emp_id" required>
+    </div>
+
+    <!-- Date of Birth -->
+    <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <!-- Gender -->
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+        </select>
+    </div>
+
+    <!-- Designation -->
+    <div class="form-group">
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" required>
+    </div>
+
+    <!-- Department -->
+    <div class="form-group">
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="">Select Department</option>
+            {% for department in departments %}
+                <option value="{{ department.id }}">{{ department.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Salary -->
+    <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" step="0.01" required>
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+<center><a href="{% url 'employee_list' %}">Cancel</a></center>
+{% endblock %}

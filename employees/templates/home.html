@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <a href="{% url 'employee_list' %}">Manage Employees</a>
+    <a href="{% url 'department_list' %}">Manage Departments</a>
+</div>
+{% endblock content %}

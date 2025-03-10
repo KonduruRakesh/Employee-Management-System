@@ -1,0 +1,332 @@
+/* Navigation Bar Styling */
+nav {
+    background-color: #333; /* Dark background for the nav bar */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: 0 auto; /* Center the nav content */
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    margin-left: 20px; /* Spacing between links */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    nav div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav h1 {
+        margin-bottom: 10px; /* Add space below the title on small screens */
+    }
+
+    nav a {
+        margin: 5px 0; /* Stack links vertically on small screens */
+    }
+}
+
+/* Container for the Links */
+div {
+    text-align: center; /* Center the links horizontally */
+    margin-top: 20px; /* Add some space at the top */
+}
+
+/* Link Styling */
+a {
+    display: inline-block; /* Make links block-level for better spacing */
+    margin: 10px; /* Add spacing between links */
+    padding: 10px 20px; /* Add padding for a button-like appearance */
+    background-color: #04111f; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover Effect for Links */
+a:hover {
+    background-color: #080607; /* Darker blue on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    a {
+        display: block; /* Stack links vertically on small screens */
+        margin: 10px auto; /* Center links horizontally */
+        width: 80%; /* Set a width for better readability */
+    }
+}
+
+/* General Styling */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Add Employee Button */
+a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #aab3bc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #c0c8d1;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #0d0f11;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action Links Styling */
+table td a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+table td a:hover {
+    background-color: #218838;
+}
+
+/* Edit Link Styling */
+table td a[href*="edit"] {
+    background-color: #ffc107;
+}
+
+table td a[href*="edit"]:hover {
+    background-color: #e0a800;
+}
+
+/* Leave Link Styling */
+table td a[href*="leave"] {
+    background-color: #dc3545;
+}
+
+table td a[href*="leave"]:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+
+    table td a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* General Styling */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Employee Details Container */
+.employee-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Employee Details Paragraphs */
+.employee-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.employee-details p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Back to List Link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .employee-details {
+        padding: 15px;
+    }
+
+    .employee-details p {
+        font-size: 14px;
+    }
+
+    .back-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel Link Styling */
+a {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

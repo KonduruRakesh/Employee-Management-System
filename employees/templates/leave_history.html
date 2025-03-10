@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h2>Leave History for {{ employee.name }}</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Leave Type</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Description</th>
+            <th>Applied Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for leave in leaves %}
+        <tr>
+            <td>{{ leave.leave_type }}</td>
+            <td>{{ leave.from_date }}</td>
+            <td>{{ leave.to_date }}</td>
+            <td>{{ leave.description }}</td>
+            <td>{{ leave.applied_date }}</td>
+            <td>{{ leave.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'employee_list' %}">Back</a>
+{% endblock content %}
